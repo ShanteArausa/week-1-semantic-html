@@ -1,110 +1,157 @@
-/* ----------------------
-   1. Global Reset & Box Model
------------------------ */
-* {
-  box-sizing: border-box;
+/* styles.css */
+
+/* ----- Global Styles ----- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0077cc;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005fa3; /* Hover effect restored */
+}
+
+/* ----- Header ----- */
+header {
+  background-color: #282c34;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-/* ----------------------
-   2. Header & Navigation
------------------------ */
-header {
-  background-color: #0044cc;
-  color: #fff;
-  padding: 20px;
-}
-
-header h1 {
-  margin-bottom: 10px;
-}
-
-nav ul {
-  display: flex; /* Flex container */
-  justify-content: space-around; /* Main axis spacing */
-  align-items: center; /* Cross axis alignment */
-  list-style: none;
-}
-
 nav ul li a {
   color: #fff;
-  text-decoration: none;
-  padding: 8px 12px;
-  transition:
-    background 0.3s,
-    color 0.3s;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #fff;
-  color: #0044cc;
-  border-radius: 4px;
+  color: #ffd700; /* Hover effect for nav links */
 }
 
-/* ----------------------
-   3. Main Sections
------------------------ */
-main {
-  padding: 20px;
-}
-
+/* ----- Sections ----- */
 section {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin: 2rem;
+  border-radius: 8px;
   background-color: #fff;
-  border: 2px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Projects section: flex layout for desktop */
-.projects-container {
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- Headings ----- */
+h2 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* ----- Calculator ----- */
+#calculator-section form {
   display: flex;
-  flex-wrap: wrap; /* Wrap projects to next row if needed */
-  gap: 20px; /* Space between project articles */
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
 }
 
-.projects-container article {
-  flex: 1 1 45%; /* Grow, shrink, base width ~45% */
-  background-color: #eaeaea;
-  padding: 15px;
-  border-radius: 6px;
+#calculator-section input,
+#calculator-section select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 120px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ----------------------
-   4. Footer
------------------------ */
-footer {
-  background-color: #0044cc;
+#calculator-section input:focus,
+#calculator-section select:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+  outline: none;
+}
+
+#calculator-section button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077cc;
   color: #fff;
-  text-align: center;
-  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* ----------------------
-   5. Responsive Design
------------------------ */
-@media (max-width: 600px) {
+#calculator-section button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* ----- Result Paragraph ----- */
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ----- Footer ----- */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #282c34;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ffd700;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
   }
 
-  .projects-container {
+  #calculator-section form {
     flex-direction: column;
   }
 }
-.projects-container article:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-} /* Full width on small screens */

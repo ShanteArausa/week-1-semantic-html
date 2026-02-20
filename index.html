@@ -7,42 +7,79 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Header -->
     <header>
       <h1>Shante Arausa-Jones</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#calculator-section">Calculator</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- Main Content -->
     <main>
-      <section>
+      <!-- About Section -->
+      <section id="about-section">
         <h2>About Me</h2>
-        <p>I am a junior web developer</p>
+        <p>
+          I am a junior web developer with a passion for creating interactive
+          and user-friendly websites.
+        </p>
+        <h3 id="dynamic-message">Welcome to Shante's Developer Journey</h3>
       </section>
-      <section>
-        <div class="projects-container">
-          <h2>Projects</h2>
-          <article>
-            <h3>Study Habit Tracker</h3>
-            <p>
-              A web application that helps students track their study habits and
-              improve their productivity. It allows users to set goals, log
-              study sessions, and analyze their progress over time.
-            </p>
-          </article>
-          <article>
-            <h3>Personal Portfolio</h3>
-            <p>
-              A personal portfolio website showcasing my projects, skills, and
-              experience as a web developer.
-            </p>
-          </article>
-        </div>
+
+      <!-- Projects Section -->
+      <section id="projects-section">
+        <h2>Projects</h2>
+        <article>
+          <h3>Study Habit Tracker</h3>
+          <p>
+            A web app that helps students track study habits, set goals, and
+            analyze progress over time.
+          </p>
+        </article>
+        <article>
+          <h3>Personal Portfolio</h3>
+          <p>
+            A portfolio website showcasing my projects, skills, and experience
+            as a web developer.
+          </p>
+        </article>
+      </section>
+
+      <!-- Calculator Section -->
+      <section id="calculator-section">
+        <h2>Mini Calculator</h2>
+        <form id="calculator-form">
+          <input
+            type="number"
+            id="num1"
+            placeholder="Enter first number"
+            required
+          />
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+          <input
+            type="number"
+            id="num2"
+            placeholder="Enter second number"
+            required
+          />
+          <button type="submit">Calculate</button>
+          <button type="button" id="clear-btn">Clear</button>
+        </form>
+        <p id="result">Result will appear here</p>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer>
       <p>&copy; 2026 Shante Arausa-Jones. All rights reserved.</p>
       <p>
@@ -55,5 +92,7 @@
         >
       </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
