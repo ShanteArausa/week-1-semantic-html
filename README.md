@@ -1,43 +1,28 @@
-Week 1 — Semantic HTML Landing Page
-Overview
+# Shante Arausa-Jones Portfolio — 
 
-This project is a semantic HTML landing page created as part of my journey toward becoming an employable web developer. The focus was to build a clean, accessible, and well-structured webpage without relying on unnecessary <div> containers.
+## Overview
+This project is part of my journey to becoming a web developer. It demonstrates:
 
-Goal
+- **Semantic HTML**: clean structure using `<header>`, `<main>`, `<section>`, `<article>`, `<footer>`.
+- **CSS Layouts & Styling**: Flexbox, hover effects, responsive design.
+- **JavaScript DOM Manipulation**: dynamic content updates, event listeners.
+- **App State Management**: tracking calculator inputs, operator, and results.
 
-To understand and apply:
+### Features
+- Landing page with **About Me** and **Projects** sections.
+- **Mini Calculator**:
+  - Supports addition, subtraction, multiplication, and division.
+  - Displays results dynamically.
+  - Includes a **Clear** button to reset inputs and results.
+- Responsive design that works on **desktop and mobile**.
+- Hover effects for sections, links, and buttons for better UX.
 
-Semantic HTML structure
-Proper heading hierarchy
-Clean file organization
+### Tech Used
+- **HTML5** — semantic structure for accessibility and maintainability.
+- **CSS3** — styling, Flexbox, hover effects, responsive layout.
+- **JavaScript** — DOM manipulation, event listeners, state management.
 
-Basic Git workflow and version control
-
-What I Learned
-
-The purpose of foundational semantic elements
-Why document hierarchy matters for accessibility and structure
-How semantic HTML improves readability and maintainability
-The importance of starting version control from the beginning of a project
-
-Structure Used
-
-<header> — Contains the site title and navigation
-<main> — Holds the primary content of the page
-<section> — Groups related content (About and Projects)
-<article> — Represents individual project entries
-<footer> — Contains copyright and social links
-<h1> to <h3> — Used in proper hierarchical order
-
-How to Run
-
-Clone the repository
-Open index.html in a web browser
-
-Future Improvements
-
-For example:
-
-Add CSS styling
-Improve accessibility with ARIA roles
-Deploy to GitHub Pages
+### How to Run
+1. Clone this repository:  
+   ```bash
+   git clone <your-repo-url>
